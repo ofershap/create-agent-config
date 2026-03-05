@@ -5,6 +5,11 @@
 </p>
 
 <p align="center">
+  Scaffold agent context files for Cursor, Claude Code, Copilot, Windsurf, Cline, and AGENTS.md.<br>
+  Detects your stack. Pulls community rules from <a href="https://cursor.directory">cursor.directory</a>. You review before anything is written.
+</p>
+
+<p align="center">
   <a href="https://www.npmjs.com/package/create-agent-config"><img src="https://img.shields.io/npm/v/create-agent-config.svg" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/create-agent-config"><img src="https://img.shields.io/npm/dm/create-agent-config.svg" alt="npm downloads" /></a>
   <a href="https://github.com/ofershap/create-agent-config/actions/workflows/ci.yml"><img src="https://github.com/ofershap/create-agent-config/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
@@ -14,13 +19,27 @@
 
 ---
 
-![Demo](assets/demo.gif)
+<p align="center">
+  <img src="assets/demo.gif" alt="Demo" />
+</p>
+
+## Quick start
 
 ```bash
-npm create agent-config
+npx create-agent-config
 ```
 
-Scans your project, detects your stack, pulls community best practices from [cursor.directory](https://cursor.directory), and writes config files for every major AI coding tool. You pick which files to create, review what will be written, and confirm before anything touches disk.
+That's it. It scans your project, asks which formats you want, and writes the files.
+
+`npm create agent-config` does the same thing (npm aliases `create` to `npx create-`).
+
+```bash
+# target a different directory
+npx create-agent-config ./my-project
+
+# skip network, use built-in templates only
+npx create-agent-config --offline
+```
 
 ## What exactly happens
 
@@ -46,23 +65,7 @@ You choose which files to generate. Here's every possible output:
 | `.windsurfrules`                  | project root               | Windsurf / Codeium                        |
 | `.clinerules`                     | project root               | Cline                                     |
 
-Each file contains your detected stack info (languages, frameworks, commands, conventions) plus community best practices if you opted in. The content is project-specific, not generic boilerplate.
-
-## Usage
-
-```bash
-# interactive mode (recommended)
-npm create agent-config
-
-# also works with npx
-npx create-agent-config
-
-# target a different directory
-npx create-agent-config ./my-project
-
-# skip network, use built-in templates only
-npx create-agent-config --offline
-```
+Each file contains your detected stack info (languages, frameworks, commands, conventions) plus community best practices if you opted in.
 
 ## What gets detected
 
@@ -135,6 +138,12 @@ Contributions welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ofershap)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github&logoColor=white)](https://github.com/ofershap)
+
+---
+
+<p align="center">
+  Demo animation made with <a href="https://github.com/ofershap/remotion-readme-kit">remotion-readme-kit</a>
+</p>
 
 ## License
 
