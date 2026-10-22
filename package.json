@@ -106,7 +106,7 @@
     "lint-staged": "^17.0.2",
     "prettier": "^3.5.3",
     "semantic-release": "^25.0.3",
-    "tsup": "^8.4.0",
+    "tsup": "^9.0.0",
     "typescript": "^7.0.2",
     "typescript-eslint": "^8.25.0",
     "vitest": "^5.0.0"
